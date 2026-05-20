@@ -5,10 +5,10 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// base: './' -> relative paths, works on GitHub Pages subpath AND custom domain
-// without needing repo-name awareness at build time.
+// base: '/subtrack-showcase/' -> absolute path scoped to the GitHub Pages project subpath.
+// If you switch to a custom domain or a different repo name, update this.
 export default defineConfig({
-  base: './',
+  base: '/subtrack-showcase/',
   plugins: [react()],
   resolve: {
     alias: {
