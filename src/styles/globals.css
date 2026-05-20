@@ -36,7 +36,8 @@ body {
   font-feature-settings: 'ss01', 'cv11';
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  /* `clip` instead of `hidden` so `position: sticky` keeps working on descendants. */
+  overflow-x: clip;
 }
 
 body {
